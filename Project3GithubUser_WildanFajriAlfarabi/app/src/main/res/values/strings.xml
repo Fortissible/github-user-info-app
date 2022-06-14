@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">ProjectGithubUser_WildanFajriAlfarabi</string>
+    <string name="username_github">Username Si Anu</string>
+    <string name="name_github">Namanya si Anu</string>
+    <string name="location_github">Lokasi si Anu</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="following_github">999</string>
+    <string name="followers_github">420</string>
+    <string name="repository_github">87</string>
+    <string name="company_github">Pt.Nganu</string>
+    <string name="followString">Follow</string>
+    <string name="todo">TODO</string>
+    <string name="GitHub">Users</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="test_string" tools:ignore="Typos">test test!</string>
+    <string name="halo_ini_fragment_follower">Halo ini fragment follower</string>
+    <string name="halo_ini_fragment_following">halo ini fragment following</string>
+    <string name="user_tidak_ditemukan">User Tidak Ditemukan</string>
+    <string name="tidak_ada_user_favourite">Tidak ada user favourite</string>
+    <string name="pindah_ke_option">pindah ke option</string>
+    <string name="night_mode">Night Mode</string>
+    <string name="bravo_one_going_dark">Bravo one, going dark!</string>
+
+</resources>

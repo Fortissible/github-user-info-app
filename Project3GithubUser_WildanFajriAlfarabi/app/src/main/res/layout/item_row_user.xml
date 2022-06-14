@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_cards"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start"
+    android:orientation="vertical"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    style="@style/cardView_bg"
+    card_view:cardUseCompatPadding="true">
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/user_profilepic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/profile_picture"
+        app:civ_border_color="#ffffff"
+        app:civ_border_width="2dp"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintHorizontal_bias="0.048"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintVertical_bias="0.0"
+        tools:ignore="ImageContrastCheck"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/user_username"
+        style="@style/boldText"
+        android:layout_marginStart="16dp"
+        android:textSize="16sp"
+        card_view:layout_constraintBottom_toBottomOf="@+id/user_profilepic"
+        card_view:layout_constraintStart_toEndOf="@+id/user_profilepic"
+        card_view:layout_constraintTop_toTopOf="@+id/user_profilepic"
+        tools:text="@string/name_github" />
+
+    <ImageButton
+        android:id="@+id/button_loved_recview"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_favourited"
+        android:background="@drawable/roundbutton"
+        card_view:layout_constraintEnd_toEndOf="@id/user_cards"
+        card_view:layout_constraintTop_toTopOf="@id/user_cards"
+        card_view:layout_constraintBottom_toBottomOf="@id/user_cards"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

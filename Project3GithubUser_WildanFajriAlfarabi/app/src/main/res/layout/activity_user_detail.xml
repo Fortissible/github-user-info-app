@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/backgroundDetailColor"
+    tools:context=".UserDetailActivity"
+    tools:ignore="ScrollViewCount">
+
+    <RelativeLayout
+        android:id="@+id/detail_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/usercard">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/detailusercard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userdetail_profilepic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+                <ImageButton
+                    android:id="@+id/fav_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="120dp"
+                    android:background="@drawable/roundbutton"
+                    android:src="@drawable/ic_favourite"
+                    app:layout_constraintBottom_toBottomOf="@id/userdetail_profilepic"
+                    app:layout_constraintStart_toStartOf="@+id/userdetail_profilepic"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/userdetail_username"
+                    style="@style/boldText_detailActivity"
+                    android:layout_marginTop="8dp"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userdetail_profilepic"
+                    tools:text="@string/username_github" />
+
+                <TextView
+                    android:id="@+id/userdetail_name"
+                    style="@style/normalText"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#BBFFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userdetail_username"
+                    tools:ignore="TextContrastCheck"
+                    tools:text="@string/name_github" />
+
+                <TextView
+                    android:id="@+id/userdetail_location"
+                    style="@style/normalText"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userdetail_followers"
+                    tools:text="@string/location_github" />
+
+                <TextView
+                    android:id="@+id/userdetail_followers"
+                    style="@style/normalText"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="64dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userdetail_username"
+                    tools:text="@string/followers_github" />
+
+                <TextView
+                    android:id="@+id/userdetail_following"
+                    style="@style/normalText"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginTop="32dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userdetail_username"
+                    tools:text="@string/following_github" />
+
+                <TextView
+                    android:id="@+id/userdetail_repository"
+                    style="@style/normalText"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userdetail_company"
+                    tools:text="@string/repository_github" />
+
+                <TextView
+                    android:id="@+id/userdetail_company"
+                    style="@style/normalText"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userdetail_location"
+                    tools:text="@string/company_github" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ProgressBar
+                android:id="@+id/detailProgressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                tools:visibility="visible" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/usercard"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="#FFFFFF"
+            app:tabTextColor="@android:color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="319dp"
+            android:layout_below="@id/tabs"
+            android:background="@color/white" />
+
+    </RelativeLayout>
+
+</ScrollView>
